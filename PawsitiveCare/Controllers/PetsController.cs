@@ -54,7 +54,7 @@ namespace PawsitiveCare.Controllers
             if (ModelState.IsValid)
             {
                 
-                pet.UserID = User.Identity.GetUserId();                
+                pet.UserID = User.Identity.GetUserName();                
                 db.Pets.Add(pet);
                 db.SaveChanges();
                 return RedirectToAction("Index");
