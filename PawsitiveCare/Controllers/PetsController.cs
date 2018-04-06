@@ -11,16 +11,27 @@ using Microsoft.AspNet.Identity;
 
 namespace PawsitiveCare.Controllers
 {
+    [Authorize]
+
     public class PetsController : Controller
     {
-        
         private PCDbEntities db = new PCDbEntities();
 
         // GET: Pets
         public ActionResult Index()
         {
-            return View(db.Pets.ToList());
+            var petOwner = User.Identity.GetUserName();
+            List<Pet> model = db.Pets.Where(x => x.UserID == petOwner).ToList();
+            return PartialView("UserPets", model);
+            //return View(db.Pets.ToList());
         }
+
+        //public PartialViewResult OnlyUserPets()
+        //{
+        //    var petOwner = User.Identity.GetUserName();
+        //    List<Pet> model = db.Pets.Where(x => x.UserID == petOwner).ToList();
+        //    return PartialView("UserPets", model);
+        //}
 
         // GET: Pets/Details/5
         public ActionResult Details(int? id)
