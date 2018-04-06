@@ -58,11 +58,11 @@ namespace PawsitiveCare
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "129894984533-sa2b8u383g178lg8ei43c3pvft5f3j0m.apps.googleusercontent.com",
+                ClientSecret = "zAU2t17zDRKMpFk0azhQ9EfH"
+            });
         }
     }
 }

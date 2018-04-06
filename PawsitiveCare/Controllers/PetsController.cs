@@ -7,11 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PawsitiveCare;
+using Microsoft.AspNet.Identity;
 
 namespace PawsitiveCare.Controllers
 {
     public class PetsController : Controller
     {
+        
         private PCDbEntities db = new PCDbEntities();
 
         // GET: Pets
@@ -48,8 +50,11 @@ namespace PawsitiveCare.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "PetID,PetName,BirthDate,PetType,Breed,PetPhoto,WeightDate,Weight,IsFixed,UserID")] Pet pet)
         {
+            
             if (ModelState.IsValid)
             {
+                
+                pet.UserID = User.Identity.GetUserId();                
                 db.Pets.Add(pet);
                 db.SaveChanges();
                 return RedirectToAction("Index");
