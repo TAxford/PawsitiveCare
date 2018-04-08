@@ -88,3 +88,33 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.PetID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+@Ajax.ActionLink("Surgeries", "IndexSurgeries", new AjaxOptions()
+{
+    HttpMethod = "Get",
+    UpdateTargetId = "divSurgeries",
+    InsertionMode = InsertionMode.Replace
+})
+<div id="divSugeries">
+</div>
+
+@Ajax.ActionLink("Vaccinations", "IndexVaccinations", new AjaxOptions()
+{
+    HttpMethod = "Get",
+    UpdateTargetId = "divVaccinations",
+    InsertionMode = InsertionMode.Replace
+})
+<div id="divVaccinations">
+    @{ 
+        Html.RenderPartial("_Vaccinations");
+    }
+</div>
+
+@Ajax.ActionLink("Documents", "IndexDocuments", new AjaxOptions()
+{
+    HttpMethod = "Get",
+    UpdateTargetId = "divDocuments",
+    InsertionMode = InsertionMode.Replace
+})
+<div id="divDocuments">
+</div>

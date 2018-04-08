@@ -358,6 +358,9 @@
     <Content Include="Views\Visits\Details.cshtml" />
     <Content Include="Views\Visits\Edit.cshtml" />
     <Content Include="Views\Visits\Index.cshtml" />
+    <Content Include="Views\Shared\_Surgeries.cshtml" />
+    <Content Include="Views\Shared\_Vaccinations.cshtml" />
+    <Content Include="Views\Shared\_Documents.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

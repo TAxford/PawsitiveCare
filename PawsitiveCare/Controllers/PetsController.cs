@@ -9,17 +9,35 @@ using System.Web.Mvc;
 using PawsitiveCare;
 using Microsoft.AspNet.Identity;
 
+using PawsitiveCare.Models;
+
 namespace PawsitiveCare.Controllers
 {
     public class PetsController : Controller
     {
         
-        private PCDbEntities db = new PCDbEntities();
+        PCDbEntities db = new PCDbEntities();
 
         // GET: Pets
         public ActionResult Index()
         {
             return View(db.Pets.ToList());
+        }
+
+        public PartialViewResult IndexSurgeries()
+        {
+            List<Surgery> a =  db.Surgeries.ToList();
+            return PartialView("_Surgeries",a);
+        }
+        public PartialViewResult IndexVaccinations()
+        {
+            List<Vaccination> b = db.Vaccinations.ToList();
+            return PartialView("_Vaccinations", b);
+        }
+        public PartialViewResult IndexDocuments()
+        {
+            List<Document> c = db.Documents.ToList();
+            return PartialView("_Documents", c);
         }
 
         // GET: Pets/Details/5

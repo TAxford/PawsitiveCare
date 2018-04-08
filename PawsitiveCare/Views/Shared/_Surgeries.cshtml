@@ -1,0 +1,24 @@
+﻿@model IEnumerable<PawsitiveCare.Surgery>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SurgeryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SurgeryDescription)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SurgeryDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SurgeryDescription)
+        </td>
+    </tr>
+}
+
+</table>
