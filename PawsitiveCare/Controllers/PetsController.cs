@@ -26,18 +26,18 @@ namespace PawsitiveCare.Controllers
 
         public PartialViewResult IndexSurgeries()
         {
-            List<Surgery> a =  db.Surgeries.ToList();
-            return PartialView("_Surgeries",a);
+            List<Surgery> sur =  db.Surgeries.ToList();
+            return PartialView("_Surgeries",sur);
         }
         public PartialViewResult IndexVaccinations()
         {
-            List<Vaccination> b = db.Vaccinations.ToList();
-            return PartialView("_Vaccinations", b);
+            List<Vaccination> vac = db.Vaccinations.ToList();
+            return PartialView("_Vaccinations", vac);
         }
         public PartialViewResult IndexDocuments()
         {
-            List<Document> c = db.Documents.ToList();
-            return PartialView("_Documents", c);
+            List<Document> doc = db.Documents.ToList();
+            return PartialView("_Documents", doc);
         }
 
         // GET: Pets/Details/5
