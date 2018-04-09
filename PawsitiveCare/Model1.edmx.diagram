@@ -16,6 +16,16 @@
         <AssociationConnector Association="PCDbModel.FK_Surgery_Pet" ManuallyRouted="false" />
         <AssociationConnector Association="PCDbModel.FK_Vaccinations_Pet" ManuallyRouted="false" />
         <AssociationConnector Association="PCDbModel.FK_Visit_Pet" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PCDbModel.C__MigrationHistory" Width="1.5" PointX="7.625" PointY="0.75" />
+        <EntityTypeShape EntityType="PCDbModel.AspNetRole" Width="1.5" PointX="1.5" PointY="3.5" />
+        <EntityTypeShape EntityType="PCDbModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="12" />
+        <EntityTypeShape EntityType="PCDbModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="14.75" />
+        <EntityTypeShape EntityType="PCDbModel.AspNetUser" Width="1.5" PointX="0.75" PointY="6.25" />
+        <EntityTypeShape EntityType="PCDbModel.sysdiagram" Width="1.5" PointX="7.625" PointY="3.75" />
+        <AssociationConnector Association="PCDbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PCDbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="PCDbModel.FK_Pet_AspNetUsers" />
+        <AssociationConnector Association="PCDbModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

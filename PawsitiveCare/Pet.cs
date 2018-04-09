@@ -45,5 +45,6 @@ namespace PawsitiveCare
         public virtual ICollection<Vaccination> Vaccinations { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Visit> Visits { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }
