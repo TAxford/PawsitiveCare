@@ -10,7 +10,8 @@ using PawsitiveCare;
 using Microsoft.AspNet.Identity;
 
 namespace PawsitiveCare.Controllers
-{
+
+    [Authorize]
     public class PetsController : Controller
     {
         

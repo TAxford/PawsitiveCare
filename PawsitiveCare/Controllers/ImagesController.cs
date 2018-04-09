@@ -10,6 +10,7 @@ using PawsitiveCare;
 
 namespace PawsitiveCare.Controllers
 {
+    [Authorize]
     public class ImagesController : Controller
     {
         private PCDbEntities db = new PCDbEntities();

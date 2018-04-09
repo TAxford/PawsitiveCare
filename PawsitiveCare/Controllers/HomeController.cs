@@ -7,6 +7,7 @@ using System.Web.Mvc;
 namespace PawsitiveCare.Controllers
 {
     [RequireHttps]
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult Index()
