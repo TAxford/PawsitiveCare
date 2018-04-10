@@ -11,12 +11,17 @@ namespace PawsitiveCare
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Surgery
     {
         public int SurgeryID { get; set; }
+        [Display(Name = "Date")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}")]
         public System.DateTime SurgeryDate { get; set; }
+        [Display(Name = "Description")]
         public string SurgeryDescription { get; set; }
+        [Display(Name = "Pet")]
         public int PetID { get; set; }
     
         public virtual Pet Pet { get; set; }
