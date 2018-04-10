@@ -20,9 +20,6 @@ namespace PawsitiveCare.Controllers
         // GET: Pets
         public ActionResult Index()
         {
-            //var petOwner = User.Identity.GetUserName();
-            //List<Pet> model = db.Pets.Where(x => x.UserID == petOwner).ToList();
-            //return PartialView("UserPets", model);
             return View(db.Pets.ToList());
         }
 
